@@ -23,3 +23,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+import os
+print("ENV KEYS:", list(os.environ.keys()))
