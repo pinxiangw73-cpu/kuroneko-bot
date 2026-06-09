@@ -27,3 +27,5 @@ import os
 print("ENV KEYS:", list(os.environ.keys()))
 import os
 print("ALL ENV:", dict(os.environ))
+import os
+print(list(os.environ.keys()))
