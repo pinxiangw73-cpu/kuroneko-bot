@@ -29,3 +29,5 @@ import os
 print("ALL ENV:", dict(os.environ))
 import os
 print(list(os.environ.keys()))
+print("BOT_TOKEN =", repr(os.getenv("BOT_TOKEN")))
+print("ALL KEYS =", list(os.environ.keys()))
