@@ -1,3 +1,5 @@
+print("AAAAA TEST 12345")
+
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 import os
