@@ -1,11 +1,17 @@
-print("AAAAA TEST 12345")
-
 from telegram import Update
-from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
+from google import genai
 import os
+from telegram.ext import (
+    ApplicationBuilder,
+    CommandHandler,
+    ContextTypes,
+    MessageHandler,
+    filters
+)
 
 BOT_TOKEN = os.getenv("BOT_TOKEN")
-
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+client = genai.Client(api_key=GEMINI_API_KEY)
 # debug（一定要）
 print("TOKEN =", repr(BOT_TOKEN))
 
@@ -25,11 +31,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-import os
-print("ENV KEYS:", list(os.environ.keys()))
-import os
-print("ALL ENV:", dict(os.environ))
-import os
-print(list(os.environ.keys()))
-print("BOT_TOKEN =", repr(os.getenv("BOT_TOKEN")))
-print("ALL KEYS =", list(os.environ.keys()))
